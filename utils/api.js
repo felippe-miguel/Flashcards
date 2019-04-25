@@ -1,5 +1,9 @@
 import { AsyncStorage } from 'react-native'
 import { formatDecksResults, DECKS } from './decks_iniciais'
+/**
+ * Referência da estrutura em:
+ * https://github.com/AdithyaBhat17/udacity-flashcards
+ */
 
 /** Requisição dos Decks da API */
 export function getDecks () {

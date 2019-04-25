@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     container: {flex: 1,justifyContent: 'center',alignItems: 'center'},
     pergunta: {alignItems: 'center',justifyContent: 'center',fontSize: 30,marginLeft: 20,textAlign: 'center',marginRight: 20,color: black},
     input: {width: 250,height: 44,padding: 8,borderWidth: 1,borderColor: black,margin: 20},
-    submitBtn: {borderWidth: 1,borderColor: black,backgroundColor: lightBlue,padding: 10,borderRadius: 10,height: 45,marginLeft: 40,marginRight: 40,justifyContent: 'center',marginBottom: 60},
+    submitBtn: {borderWidth: 1,borderColor: black,backgroundColor: lightBlue,padding: 10,borderRadius: 30,height: 45,marginLeft: 40,marginRight: 40,justifyContent: 'center',marginBottom: 60},
     submitBtnText: {color: white,fontSize: 22,textAlign: 'center'}
 })
 

@@ -2,7 +2,12 @@ import { AsyncStorage } from 'react-native'
 
 export const DECKS = 'DECKS'
 
-/** Lista de dados iniciais da aplicação */
+/**
+ * Lista de dados iniciais da aplicação 
+ * Questões retiradas do site  https://rachacuca.com.br
+ * Referência de estrutura em:
+ * https://github.com/AdithyaBhat17/udacity-flashcards
+ */
 let decks = {
     Quimica: {
         title: 'Química',
@@ -31,6 +36,23 @@ let decks = {
             {
                 pergunta: 'Qual o nome do processo de transmissão de calor?',
                 resposta: 'Condução'
+            }
+        ]
+    },
+    Historia: {
+        title: 'História',
+        cards: [
+            {
+                pergunta: 'Qual foi o primeiro faraó do Egito?',
+                resposta: 'Menés'
+            },
+            {
+                pergunta: 'Em qual mar o Rio Nilo deságua?',
+                resposta: 'Mar Mediterrânio'
+            },
+            {
+                pergunta: 'Qual o nome do processo em que o corpo do falecido era tratado, e depois envolvido em faixas de linho?',
+                resposta: 'Mumificação'
             }
         ]
     }

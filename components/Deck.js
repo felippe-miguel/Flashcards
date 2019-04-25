@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     deck: {flex: 1,justifyContent: 'center',alignItems: 'center'},
     title: {fontSize: 30,color: black},
     count: {marginTop: 10,fontSize: 25,color: gray},
-    btn: {flexDirection: 'row',width: 150,height: 50,backgroundColor: white,borderRadius: 10,borderColor: black,borderWidth: 1,padding: 15,marginLeft: 10,marginRight: 10,marginTop: 17,justifyContent: 'space-around',alignItems: 'center'},
+    btn: {flexDirection: 'row',width: 150,height: 50,backgroundColor: white,borderRadius: 30,borderColor: black,borderWidth: 1,padding: 15,marginLeft: 10,marginRight: 10,marginTop: 17,justifyContent: 'space-around',alignItems: 'center'},
     btnText: {fontSize: 16,color: white},
     btnContainer: {flex: 1,flexDirection: 'row',justifyContent: 'center',alignItems: 'center'},
     textContainer: {flex: 1,justifyContent: 'center',alignItems: 'center'}

@@ -29,7 +29,7 @@ const Score = (props) => (
 
 const styles = StyleSheet.create({
     center: {flex: 1,justifyContent: 'center',alignItems: 'center'},
-    btn: {width: 150,height: 50,justifyContent: 'center',alignItems: 'center',borderRadius: 10,borderColor: black,textAlign: 'center',borderWidth: 1,padding: 15,marginLeft: 10,marginRight: 10,},
+    btn: {width: 150,height: 50,justifyContent: 'center',alignItems: 'center',borderRadius: 30,borderColor: black,textAlign: 'center',borderWidth: 1,padding: 15,marginLeft: 10,marginRight: 10,},
     btnText: {textAlign: 'center',color: white,fontSize: 16},
     score: { color: black, fontSize: 25,},
     btnContainer: {flex: 1,flexDirection: 'row',justifyContent: 'center',alignItems: 'center'}
