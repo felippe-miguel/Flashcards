@@ -1,4 +1,4 @@
-import { ADD_CARD, ADD_DECK, RECEIVE_DECKS } from '../actions'
+import { ADICIONAR_CARD, ADICIONAR_DECK, GET_DECKS } from '../actions'
 
 /**
  * Reducers da aplicação
@@ -9,24 +9,24 @@ import { ADD_CARD, ADD_DECK, RECEIVE_DECKS } from '../actions'
  */
 export default function decks(state={}, action) {
     switch (action.type) {
-        case ADD_CARD:
+        case ADICIONAR_CARD:
             return {
                 ...state,
                 [action.deckId]: {
                     title: state[action.deckId].title,
-                    questions: state[action.deckId].questions.concat({
-                        question: action.question,
-                        answer: action.answer
+                    cards: state[action.deckId].cards.concat({
+                        pergunta: action.pergunta,
+                        resposta: action.resposta
                     })
                 }
             }
-        case ADD_DECK: {
+        case ADICIONAR_DECK: {
             return {
                 ...state,
                 [action.deckId]: action.deck
             }
         }
-        case RECEIVE_DECKS:
+        case GET_DECKS:
             return {
                 ...state,
                 ...action.decks

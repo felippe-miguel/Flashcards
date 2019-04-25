@@ -1,19 +1,19 @@
-export const ADD_CARD = 'ADD_CARD'
-export const ADD_DECK = 'ADD_DECK'
-export const RECEIVE_DECKS = 'RECEIVE_DECKS'
+export const ADICIONAR_CARD = 'ADICIONAR_CARD'
+export const ADICIONAR_DECK = 'ADICIONAR_DECK'
+export const GET_DECKS = 'GET_DECKS'
 
-export function addCard(deckId, question, answer) {
+export function addCard(deckId, pergunta, resposta) {
     return {
-        type: ADD_CARD,
+        type: ADICIONAR_CARD,
         deckId,
-        question,
-        answer
+        pergunta,
+        resposta
     }
 }
 
 export function addDeck(deckId, deck) {
     return {
-        type: ADD_DECK,
+        type: ADICIONAR_DECK,
         deckId,
         deck
     }
@@ -21,7 +21,7 @@ export function addDeck(deckId, deck) {
 
 export function receiveDecks(decks) {
     return {
-        type: RECEIVE_DECKS,
+        type: GET_DECKS,
         decks,
     }
 }

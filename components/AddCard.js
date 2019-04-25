@@ -17,50 +17,39 @@ SubmitBtn = ({ onPress }) => {
 
 class AddCard extends React.Component{
     state = {
-        question: '',
-        answer: ''
+        pergunta: '',
+        resposta: ''
     }
 
     submit = () => {
-        const { question, answer } = this.state
+        const { pergunta, resposta } = this.state
         const { deckId, dispatch } = this.props
 
-        if (question === '' || answer === '') {
+        if (pergunta === '' || resposta === '') {
             alert('Os dois campos precisam estar preenchidos')
             return 
         }
 
         /** atualiza a store */
-        dispatch(addCard(deckId, question, answer))
+        dispatch(addCard(deckId, pergunta, resposta))
 
         /** reseta o estado do componente */
         this.setState({
-            question: '',
-            answer: ''
+            pergunta: '',
+            resposta: ''
         })
 
         /** salva o card utilizando a API */
-        saveCard(deckId, question, answer)
+        saveCard(deckId, pergunta, resposta)
     }
 
     render() {
-        const { question, answer } = this.state
-        
         return(
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
                 <Text style={styles.label}>Pergunta</Text>
-                <TextInput
-                 value={question}
-                 style={styles.input}
-                 onChangeText={(question) => this.setState({question})}
-                 autoFocus={true}
-                />
+                <TextInput value={this.state.pergunta} style={styles.input} onChangeText={(pergunta) => this.setState({pergunta})} autoFocus={true}/>
                 <Text style={styles.label}>Resposta</Text>
-                <TextInput
-                 value={answer}
-                 style={styles.input}
-                 onChangeText={(answer) => this.setState({answer})}
-                />
+                <TextInput value={this.state.resposta} style={styles.input} onChangeText={(resposta) => this.setState({resposta})}/>
                 <SubmitBtn onPress={this.submit} />
             </KeyboardAvoidingView>
         )
@@ -68,42 +57,11 @@ class AddCard extends React.Component{
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 40
-    },
-    question: {
-        fontSize: 18,
-        alignSelf: 'flex-start',
-        color: black
-    },
-    input: {
-        width: 250,
-        height: 44,
-        padding: 8,
-        borderWidth: 1,
-        borderColor: black,
-        marginBottom: 15
-    },
-    submitBtn: {
-        borderWidth: 1,
-        justifyContent: 'center',
-        backgroundColor: orange,
-        borderColor: black,
-        padding: 10,
-        borderRadius: 10,
-        height: 45,
-        marginLeft: 40,
-        marginRight: 40,
-        marginBottom: 100
-    },
-    submitBtnText: {
-        color: white,
-        fontSize: 22,
-        textAlign: 'center'
-    }
+    container: {flex: 1,justifyContent: 'center',alignItems: 'center',margin: 40},
+    pergunta: {fontSize: 18,alignSelf: 'flex-start',color: black},
+    input: {width: 250,height: 44,padding: 8,borderWidth: 1,borderColor: black,marginBottom: 15},
+    submitBtn: {borderWidth: 1,justifyContent: 'center',backgroundColor: orange,borderColor: black,padding: 10,borderRadius: 10,height: 45,marginLeft: 40,marginRight: 40,marginBottom: 100},
+    submitBtnText: {color: white,fontSize: 22,textAlign: 'center'}
 })
 
 function mapStateToProps(state, { navigation }){
